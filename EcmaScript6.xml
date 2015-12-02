@@ -19,8 +19,9 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="gf" value="function* $FUNCTION_NAME$() {&#10;  $END$&#10;}" description="Inserts generator function" toReformat="true" toShortenFQNames="true">
+  <template name="gf" value="function* $FUNCTION_NAME$($PARAM$) {&#10;  $END$&#10;}" description="Inserts generator function" toReformat="true" toShortenFQNames="true">
     <variable name="FUNCTION_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
@@ -59,6 +60,15 @@
   </template>
   <template name="ts" value="`$STRING$${$PARAM$}$END$`" description="A new template string" toReformat="true" toShortenFQNames="true">
     <variable name="STRING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="afi" value="($PARAM$) =&gt; $END$" description="Inserts inline arrow function" toReformat="true" toShortenFQNames="true">
     <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
